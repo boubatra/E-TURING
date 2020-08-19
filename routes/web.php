@@ -21,3 +21,4 @@ Route::resource('/utilisateurs','UtilisateurController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'LoginController@index')->name('home');
