@@ -156,8 +156,8 @@
                                 </div>
                                 
                                 <div class="container-login100-form-btn">
-                                    <button class="login100-form-btn">
-                                        Login
+                                    <button type="submit" class="login100-form-btn" >
+                                        {{ __('Login') }}
                                     </button>
                                 </div>
                                 <div class="form-check">
@@ -169,12 +169,13 @@
                                 </div>
             
                                 <div class="text-center p-t-12">
-                                    <span class="txt1">
-                                        Forgot
-                                    </span>
-                                    <a class="txt2" href="#">
-                                        Username / Password?
+                                    
+                                    @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
                                     </a>
+                                @endif
+                                    
                                 </div>
             
                                 <div class="text-center p-t-136">
